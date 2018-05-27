@@ -1,5 +1,5 @@
 export default {
-  pageLoad: {
+  payLoad: {
     loading: false
   },
   errorReducer: {

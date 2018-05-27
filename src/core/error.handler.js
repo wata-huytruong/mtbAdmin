@@ -3,18 +3,18 @@ import { loginFail } from '../actions/mainActions';
 import toastr from 'toastr';
 import _ from 'lodash';
 
-export function catchError(xhr, dispatch, type, ) {
+export function catchError(error, dispatch, type, ) {
     let responseText = undefined
     try {
-        responseText = JSON.parse(xhr.responseText)
-        if (xhr.status == 401) {
+        responseText = JSON.parse(error.responseText)
+        if (error.status == 401) {
             dispatch(loginFail())
             // browserHistory.push(`/login?next=${redirect}`)
         }
 
         return dispatch({
             type: type,
-            error: checkError(responseText, xhr.status)
+            error: checkError(responseText, error.status)
         })
     }
     catch (err) {
@@ -64,7 +64,7 @@ export function checkError(data, status) {
             error.message = data.error.message;
         }
     }
-
+    error.message = data.message;
     error.status = status;
     return error;
 

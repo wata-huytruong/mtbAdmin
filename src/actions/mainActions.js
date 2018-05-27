@@ -26,10 +26,10 @@ export function login(email, password, redirect = '/') {
         })
         userServices.login(email, password, function (error, result, status, xhr) {
             if (error) {
-                return catchError(xhr, dispatch, types.LOGIN_FAILURE, redirect);
-                dispatch({
-                    type: types.LOGIN_FAILURE
-                })
+                return catchError(error, dispatch, types.LOGIN_FAILURE, redirect);
+                // dispatch({
+                //     type: types.LOGIN_FAILURE
+                // })
             }
             const { access_token, user, company } = result.data;
             if (!user.admin) {

@@ -8,11 +8,10 @@ import initialState from './initialState';
 // create a copy of the state passed and set new values on the copy.
 // Note that I'm using Object.assign to create a copy of current state
 // and update values on the copy.
-export default function pageLoad(state = initialState.pageLoad, action) {
+export default function payLoad(state = initialState.payLoad, action) {
   // let newState;
   const { type } = action;
   const matches = /(.*)_(REQUEST|SUCCESS|FAILURE)/.exec(type);
-  console.log(matches)
   // not a *_REQUEST / *_SUCCESS /  *_FAILURE actions, so we ignore them
   if (!matches) return state;
   const [, requestName, requestState] = matches;

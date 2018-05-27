@@ -23,7 +23,7 @@ HomePageContainer.propTypes = {
 
 function mapStateToProps(state) {
     return {
-        loading: state.pageLoad.loading,
+        loading: state.payLoad.loading,
         currentUser: state.main.currentUser,
         company: state.main.company
     };

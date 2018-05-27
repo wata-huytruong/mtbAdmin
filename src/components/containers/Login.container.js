@@ -22,7 +22,7 @@ LoginContainer.propTypes = {
 
 function mapStateToProps(state) {
     return {
-        loading: state.pageLoad.loading
+        loading: state.payLoad.loading
     };
 }
 

@@ -36,21 +36,27 @@ class Login extends React.Component {
                     </div>
                 </div> :
                     <div className="login-page">
-                        <div className="login-form">
+                        <form className="login-form"
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                this.handleLogin();
+                                return false
+                            }}
+                        >
                             <div className="menu-logo"></div>
                             <p><strong>{ENG.MOBILE_TECH_RX}</strong></p>
                             <p><strong>{ENG.BACK_OFFICE_ADMIN_PORTAL_LOGIN}</strong></p>
                             <div className="form-group">
                                 <label htmlFor="email">{ENG.EMAIL}:</label>
-                                <input type="email" ref={input => this.email = input} className="form-control" id="email" placeholder="Enter email" name="email" required="" />
+                                <input type="email" ref={input => this.email = input} className="form-control" id="email" placeholder="Enter email" name="email" required />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="pwd">{ENG.PASSWORD}:</label>
-                                <input type="password" ref={input => this.password = input} className="form-control" id="pwd" placeholder="Enter password" name="pwd" required="" />
+                                <input type="password" ref={input => this.password = input} className="form-control" id="pwd" placeholder="Enter password" name="pwd" required />
                             </div>
                             <a href="https://mobiletechrx.com/forgot">{ENG.FORGOT_PASSWORD}</a>
-                            <button onClick={this.handleLogin} className="btn btn-default">{ENG.LOGIN}</button>
-                        </div>
+                            <button type="submit" className="btn btn-default">{ENG.LOGIN}</button>
+                        </form>
                     </div>
                 }
             </div>

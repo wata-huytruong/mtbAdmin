@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import main from './mainReducer';
-import pageLoad from './pageLoadReducer';
+import payLoad from './payLoadReducer';
 import { routerReducer } from 'react-router-redux';
 
 const rootReducer = combineReducers({
   main,
-  pageLoad,
+  payLoad,
   routing: routerReducer
 });
 
