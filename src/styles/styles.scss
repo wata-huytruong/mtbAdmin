@@ -1,0 +1,47 @@
+/* Variables */
+$vin-blue: #5bb7db;
+$vin-green: #60b044;
+$vin-red: #ff0000;
+
+/* Styles */
+html {
+  font-size: 16px;
+
+  @media screen and (min-width: 350px) and (max-width: 600px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 12px;
+  }
+}
+
+* {
+  transition: all 0.35s ease-in;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+
+  @media screen and (min-width: 1400px) {
+    max-width: 1400px;
+  }
+}
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #00ABF8;
+  border-color: #00ABF8;
+
+  &:hover {
+    color: #fff;
+    background-color: darken(#00ABF8, 15%);
+    border-color: #00ABF8;
+  }
+
+  &.focus, &:focus {
+    box-shadow: darken(#00ABF8, 15%);
+  }
+}

@@ -1,0 +1,180 @@
+header {
+    .navbar {
+      position: sticky;
+      background-color: #ffffff;
+      box-shadow: 0 0.5rem 1rem 0 rgba(#000000, 0.05);
+      padding-top: unset;
+      padding-bottom: unset;
+  
+      @media screen and (max-width: 900px) {
+        padding: 1.25rem 1.5rem;
+      }
+  
+      .navbar-brand {
+        padding-bottom: 0.5375rem;
+        margin-right: 3.75rem;
+  
+        @media screen and (max-width: 900px) {
+          padding-bottom: 0.3125rem;
+        }
+      }
+  
+      .nav-icon {
+        position: relative;
+        width: 1.75rem;
+        height: 1.25rem;
+        transform: rotate(0deg);
+        transition: 0.5s ease-in-out;
+        margin-left: auto;
+        cursor: pointer;
+  
+        @media screen and (min-width: 1200px) {
+          display: none;
+        }
+  
+        span {
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 1.75rem;
+          height: 0.125rem;
+          background-color: #B1B5B9;
+          transform: rotate(0deg);
+          transition: .25s ease-in-out;
+          opacity: 1;
+  
+          &:nth-child(1) {
+            top: 0;
+          }
+          &:nth-child(2), &:nth-child(3) {
+            top: 0.5625rem;
+          }
+          &:nth-child(4) {
+            top: 1.125rem;
+          }
+        }
+  
+        &.open {
+  
+          span:nth-child(1) {
+            top: 0.5625rem;
+            left: 50%;
+            width: 0%;
+          }
+          span:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          span:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          span:nth-child(4) {
+            top: 0.5625rem;
+            left: 50%;
+            width: 0%;
+          }
+        }
+      }
+  
+      .nav-main {
+  
+        @media screen and (max-width: 900px) {
+          padding: 1.25rem 0.25rem 0 0.25rem;
+        }
+  
+        .nav-item {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+  
+          &:first-child {
+            padding-left: unset;
+          }
+  
+          &.active {
+  
+            .nav-link {
+              border-color: #00ABF8;
+            }
+          }
+  
+          @media screen and (max-width: 900px) {
+            padding-left: unset;
+            padding-right: unset;
+          }
+  
+          .nav-link {
+            color: #353535;
+            font-size: 0.875rem;
+            font-family: 'Alegreya';
+            text-transform: uppercase;
+            letter-spacing: 0.0625rem;
+            border-bottom: 0.25rem solid transparent;
+            padding: 2rem 0;
+  
+            &:hover {
+              color: #00ABF8;
+            }
+  
+            @media screen and (max-width: 900px) {
+              font-size: 1.5rem;
+              border-bottom: unset;
+              padding-top: 1.25rem;
+              padding-bottom: 1.25rem;
+            }
+          }
+        }
+      }
+  
+      .nav-sub {
+        display: flex;
+        padding: 0 0.25rem;
+  
+        @media screen and (min-width: 1200px) {
+          display: none;
+        }
+  
+        .nav-item {
+  
+          .nav-link {
+            color: #B8B8B8;
+            font-size: 1rem;
+            font-family: 'Alegreya';
+            text-transform: uppercase;
+            letter-spacing: 0.0625rem;
+            padding: 1.25rem 0;
+          }
+        }
+      }
+  
+      .navbar-text {
+        padding-bottom: 0.75rem;
+  
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+  
+        .icon {
+          margin-left: 1.25rem;
+        }
+      }
+    }
+  }
+  
+  main {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  
+    .container {
+      position: relative;
+  
+      .sidebar {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        width: 17rem;
+      }
+      .content {
+        margin-left: 17rem;
+      }
+    }
+  }
+  
