@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { hot } from "react-hot-loader";
 import PrivateRoute from "./PrivateRoute";
+import Clients from "./presentations/Clients"
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -21,6 +22,7 @@ class App extends React.Component {
       <Switch>
         <Route path="/login" component={LoginContainer} />
         <PrivateRoute exact path="/" component={HomePageContainer} />
+        <PrivateRoute exect path="/clients" component={Clients} />
         <PrivateRoute path="/about" component={AboutPage} />
         <Route component={NotFoundPage} />
       </Switch>

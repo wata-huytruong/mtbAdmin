@@ -18,9 +18,6 @@ export default function mainReducer(state = initialState.mainReducer, action) {
       newState.currentUser = action.currentUser;
       newState.company = action.company;
       return newState;
-      // newState = handleCRUDAction()
-      // newState = objectAssign({}, state, { currentUser: action.currentUser, company: action.company });
-      // return newState;
     }
     case types.LOGOUT: {
       newState = objectAssign({}, state, { currentUser: {}, company: {} });
